@@ -76,7 +76,7 @@ main (int argc, char* argv[])
 		(i = world_rank + (height*world_size)) % world_size){
 		x = minX;
 		for(int j = 0; j < width; ++j) {
-			localMandelbrot = render(mandelbrot(x,y) / 512.0);
+			localMandelbrot(j,i) = render(mandelbrot(x,y) / 512.0);
 			x += jt;
 		}
 		MPI_Gather(&localMandelbrot, width, MPI_INT, img_view,
