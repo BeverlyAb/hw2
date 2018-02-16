@@ -73,20 +73,20 @@ main (int argc, char* argv[])
 
 	y = minY;
 	
-	for(int i = world_rank; i < height; 
-		(i += world_rank + (height*world_size))){
+	for(int i = world_rank; i < height; i += world_size){
 		x = minX;
 		for(int j = 0; j < width; ++j) {
-			localMandelbrot[j] = mandelbrot(x,y) / 512.0;
-			printf("%f\n", localMandelbrot[j]);
+			localMandelbrot[j] = mandelbrot(x, it*i) / 512.0;
+			printf("for loop = %i, [%i] = %f\n",i, world_rank, localMandelbrot[j]);
 			x += jt;
+			
 		}
 		printf("my rank %i\n",world_rank);
 		printf("%i\n",world_size);
-	
-		y += it;			
+	//	y += it;			
 
 		MPI_Barrier(MPI_COMM_WORLD);
+		
 		MPI_Gather(&localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
 		width, MPI_FLOAT, 0, MPI_COMM_WORLD);
 	
