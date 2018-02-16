@@ -27,6 +27,12 @@ mandelbrot(double x, double y) {
   return it;
 }
 
+float subMan(double x, double y, float *array, 
+						int world_rank, int wold_size, int height, int width)
+{
+ return 0.0;
+} 
+
 int
 main (int argc, char* argv[])
 {
@@ -59,31 +65,40 @@ main (int argc, char* argv[])
   gil::rgb8_image_t img(height, width);
   auto img_view = gil::view(img);
 
-/*	
-  y = minY;
-  for (int i = 0; i < height; ++i) {
-    x = minX;
-    for (int j = 0; j < width; ++j) {
-      img_view(j, i) = render(mandelbrot(x, y)/512.0);
-      x += jt;
-    }
-    y += it;
-  } 
-*/
-	int localMandelbrot = 0;
+	float * localMandelbrot = (float *)malloc(sizeof(float) * width);
+	float * finalMandelbrot = NULL;
+	
+	if(world_rank == 0)
+		finalMandelbrot = (float *)malloc(sizeof(float) * height * width);			
+
 	y = minY;
-	for(int i = 0; i < height; 
-		(i = world_rank + (height*world_size)) % world_size){
+	
+	for(int i = world_rank; i < height; 
+		(i += world_rank + (height*world_size)) % world_size){
 		x = minX;
 		for(int j = 0; j < width; ++j) {
-			localMandelbrot = render(mandelbrot(x,y) / 512.0);
+			localMandelbrot[j] = mandelbrot(x,y) / 512.0;
+			printf("%f\n", localMandelbrot[j]);
 			x += jt;
 		}
-		MPI_Gather(&localMandelbrot, width, MPI_INT, img_view,
-		width, MPI_INT, 0, MPI_COMM_WORLD);
-		y += it;
-	}
+		printf("my rank %i\n",world_rank);
+		printf("%i\n",world_size);
+	
+		y += it;			
 
+		MPI_Barrier(MPI_COMM_WORLD);
+		MPI_Gather(&localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
+		width, MPI_FLOAT, 0, MPI_COMM_WORLD);
+	
+		if(world_rank == 0){
+			for(int  k = 1; k <= world_size; ++k){
+				for(int  j = 0; j < width; ++j){
+				//	printf("%f\n",finalMandelbrot[j*k]);
+					img_view(k, j) = render(finalMandelbrot[j*k]);
+				}
+			}
+		}	
+	}	
   gil::png_write_view("mandelbrot.png", const_view(img));
 
 	MPI_Finalize();

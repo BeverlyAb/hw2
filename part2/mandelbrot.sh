@@ -18,4 +18,5 @@ module load openmpi-1.8.3/gcc-4.9.2
 
 # Run the program 
 #mpirun -np 1  ./mandelbrot_serial 1000 1000
-mpirun -np 1  ./mandelbrot_serial 5 5
+mpirun -np 5  ./mandelbrot_susie 5 5
+mpirun -np 2 -npernode 1 ./mandelbrot_susie 5 5

@@ -62,7 +62,7 @@ main(int argc, char* argv[]) {
     x = minX;
     for (int j = 0; j < width; ++j) {
       img_view(j, i) = render(mandelbrot(x, y)/512.0);
-			printf("%f\n",(mandelbrot(x, y)/512.0));
+			printf("%f",(mandelbrot(x, y)/512.0));
       x += jt;
     }
     y += it;
