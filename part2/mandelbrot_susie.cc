@@ -71,7 +71,10 @@ main (int argc, char* argv[])
 	if(world_rank == 0)
 		finalMandelbrot = (float *)malloc(sizeof(float) * height * width);			
 
+	//account rows not being perfectly divisible by processors		
 	y = minY;
+	int dif = height % world_size;
+	height -= dif;				
 	
 	for(int i = world_rank; i < height; i += world_size){
 		x = minX;
@@ -83,24 +86,37 @@ main (int argc, char* argv[])
 		}
 		printf("my rank %i\n",world_rank);
 		printf("%i\n",world_size);
-	//	y += it;			
+	}
 
-		MPI_Barrier(MPI_COMM_WORLD);
-		
-		MPI_Gather(&localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
-		width, MPI_FLOAT, 0, MPI_COMM_WORLD);
-	
-		if(world_rank == 0){
-			for(int  k = 1; k <= world_size; ++k){
-				for(int  j = 0; j < width; ++j){
-				//	printf("%f\n",finalMandelbrot[j*k]);
-					img_view(k, j) = render(finalMandelbrot[j*k]);
-				}
-			}
-		}	
+	//get leftovers if necessary	
+	for(int i = world_rank; i < dif; i ++){
+		x = minX;
+		for(int j = 0; j < width; ++j) {
+			localMandelbrot[j] = mandelbrot(x, y  + it *(i + world_size)) / 512.0;
+			printf("for loop = %i, [%i] = %f\n",i+world_size, world_rank, localMandelbrot[j]);
+			x += jt;	
+		}
+		printf("my rank %i\n",world_rank);
+		printf("%i\n",world_size);		
 	}	
+
+	MPI_Barrier(MPI_COMM_WORLD);
+		
+	MPI_Gather(&localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
+	width, MPI_FLOAT, 0, MPI_COMM_WORLD);
+	
+	if(world_rank == 0){
+		for(int  k = 1; k <= world_size; ++k){
+			for(int  j = 0; j < width; ++j){
+			//	printf("%f\n",finalMandelbrot[j*k]);
+				img_view(k, j) = render(finalMandelbrot[j*k]);
+			}
+		}
+	}	
+	
   gil::png_write_view("mandelbrot.png", const_view(img));
 
+	MPI_Barrier(MPI_COMM_WORLD);
 	MPI_Finalize();
 }
 
