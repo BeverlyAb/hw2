@@ -80,12 +80,24 @@ main (int argc, char* argv[])
 		x = minX;
 		for(int j = 0; j < width; ++j) {
 			localMandelbrot[j] = mandelbrot(x,  y + it*i) / 512.0;
-			printf("for loop = %i, [%i] = %f\n",i, world_rank, localMandelbrot[j]);
+	//		printf("for loop = %i, [%i] = %f\n",i, world_rank, localMandelbrot[j]);
 			x += jt;
 			
 		}
-		printf("my rank %i\n",world_rank);
-		printf("%i\n",world_size);
+		MPI_Barrier(MPI_COMM_WORLD);	
+		MPI_Gather(	localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
+								width, MPI_FLOAT, 0, MPI_COMM_WORLD);
+			
+	/*	if(world_rank == 1){
+			for(int j = 0; j < width; ++j) 
+			printf("1 better spit! : %f\n",localMandelbrot[j]); 
+		}*/
+	//	if(world_rank == 0){
+	//		for(int  j = 0; j < width; ++j)
+		//		printf("%f\n",finalMandelbrot[j]);
+	//	}
+	//	printf("my rank %i\n",world_rank);
+	//	printf("%i\n",world_size);
 	}
 
 	//get leftovers if necessary	
@@ -93,22 +105,24 @@ main (int argc, char* argv[])
 		x = minX;
 		for(int j = 0; j < width; ++j) {
 			localMandelbrot[j] = mandelbrot(x, y  + it *(i + world_size)) / 512.0;
-			printf("for loop = %i, [%i] = %f\n",i+world_size, world_rank, localMandelbrot[j]);
+	//		printf("for loop = %i, [%i] = %f\n",i+world_size, world_rank, localMandelbrot[j]);
 			x += jt;	
 		}
-		printf("my rank %i\n",world_rank);
-		printf("%i\n",world_size);		
-	}	
+		MPI_Barrier(MPI_COMM_WORLD);	
+		MPI_Gather(localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
+								width, MPI_FLOAT, 0, MPI_COMM_WORLD);
 
-	MPI_Barrier(MPI_COMM_WORLD);
-		
-	MPI_Gather(&localMandelbrot, width, MPI_FLOAT, finalMandelbrot,
-	width, MPI_FLOAT, 0, MPI_COMM_WORLD);
+			if(world_rank == 0)
+			for(int  j = 0; j < width; ++j)
+			//	printf("%f\n",finalMandelbrot[j]);
+//		printf("my rank %i\n",world_rank);
+//		printf("%i\n",world_size);		
+	}	
 	
 	if(world_rank == 0){
 		for(int  k = 1; k <= world_size; ++k){
 			for(int  j = 0; j < width; ++j){
-			//	printf("%f\n",finalMandelbrot[j*k]);
+				//printf("%f\n",finalMandelbrot[j*k]);
 				img_view(k, j) = render(finalMandelbrot[j*k]);
 			}
 		}
