@@ -1,0 +1,260 @@
+*** Trial Serial 1 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.791537
+*** Trial Serial 2 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.793366
+*** Trial Serial 3 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.7958
+*** Trial Serial 4 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.823358
+*** Trial Serial 5 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.800365
+*** Trial (6 Nodes / 48 Cores) 1 ***
+--------------------------------------------------------------------------
+[[36117,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+MS Time = 0.722449
+*** Trial (6 Nodes / 48 Cores) 2 ***
+--------------------------------------------------------------------------
+[[36211,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer resolution: ~ 1 us (?)
+MS Time = 0.703999
+*** Trial (6 Nodes / 48 Cores) 3 ***
+--------------------------------------------------------------------------
+[[36183,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+MS Time = 0.701044
+*** Trial (6 Nodes / 48 Cores) 4 ***
+--------------------------------------------------------------------------
+[[36276,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+MS Time = 0.71662
+*** Trial (6 Nodes / 48 Cores) 5 ***
+--------------------------------------------------------------------------
+[[36232,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+MS Time = 0.712332
+*** Trial Susie (6 Nodes / 48 Cores) 1 ***
+--------------------------------------------------------------------------
+[[36332,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Susie Time = 0.464775
+*** Trial Susie (6 Nodes / 48 Cores) 2 ***
+--------------------------------------------------------------------------
+[[36288,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Susie Time = 0.444632
+*** Trial Susie (6 Nodes / 48 Cores) 3 ***
+--------------------------------------------------------------------------
+[[35876,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Susie Time = 0.453886
+*** Trial Susie (6 Nodes / 48 Cores) 4 ***
+--------------------------------------------------------------------------
+[[35896,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Susie Time = 0.456239
+*** Trial Susie (6 Nodes / 48 Cores) 5 ***
+--------------------------------------------------------------------------
+[[35868,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Susie Time = 0.450705
+*** Trial Joe (6 Nodes / 48 Cores) 1 ***
+--------------------------------------------------------------------------
+[[35952,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Joe Time = 0.478243
+*** Trial Joe (6 Nodes / 48 Cores) 2 ***
+--------------------------------------------------------------------------
+[[35924,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Joe Time = 0.43584
+*** Trial Joe (6 Nodes / 48 Cores) 3 ***
+--------------------------------------------------------------------------
+[[36008,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Joe Time = 0.418586
+*** Trial Joe (6 Nodes / 48 Cores) 4 ***
+--------------------------------------------------------------------------
+[[35980,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Joe Time = 0.433318
+*** Trial Joe (6 Nodes / 48 Cores) 5 ***
+--------------------------------------------------------------------------
+[[36064,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-4
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Joe Time = 0.432767

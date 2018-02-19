@@ -1,0 +1,21 @@
+*** Trial Serial 1 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.791917
+*** Trial Serial 2 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.794502
+*** Trial Serial 3 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.799314
+*** Trial Serial 4 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.815976
+*** Trial Serial 5 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.790003
+*** Trial Susie (2 Nodes / 48 process) 1 ***

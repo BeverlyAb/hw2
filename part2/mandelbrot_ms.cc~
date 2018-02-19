@@ -100,7 +100,7 @@ main(int argc, char* argv[])
 				nextIndx = picIndx +  world_size -1;
 			else {
 				nextIndx = -1;
-			//	printf("last indx = %i\n", picIndx + world_size -1);
+				printf("last indx = %i\n", picIndx + world_size -1);
 			}
 			//send task based on procRank 
 			MPI_Send(&nextIndx, 1, MPI_INT, procRank, MASTER, MPI_COMM_WORLD);

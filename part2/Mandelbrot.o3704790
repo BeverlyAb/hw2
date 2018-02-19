@@ -1,0 +1,33 @@
+*** Trial Serial 1 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.81261
+*** Trial Serial 2 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.792125
+*** Trial Serial 3 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.784203
+*** Trial Serial 4 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.817251
+*** Trial Serial 5 ***
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Serial Time : 0.787255
+*** Trial (64 Cores) 1 ***
+--------------------------------------------------------------------------
+[[33712,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)

@@ -19,4 +19,13 @@ gil::rgb8_pixel_t render(float v) {
   return gil::rgb8_pixel_t(r, g, b);
 }
 
+Color_Point render_color(float v){
+
+  Color_Point temp;
+  temp.r = (int)(9*(1-v)*v*v*v*255);
+  temp.g = (int)(15*(1-v)*(1-v)*v*v*255);
+  temp.b =  (int)(8.5*(1-v)*(1-v)*(1-v)*v*255);
+  return temp;
+
+};
 /* eof */

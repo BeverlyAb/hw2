@@ -1,0 +1,90 @@
+[compute-13-5.local:22751] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22750] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22750] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22751] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22728] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22728] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22778] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22778] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22779] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22779] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22756] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22756] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22807] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22806] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22807] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22806] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22784] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22784] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22834] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22834] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22835] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22835] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22812] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22812] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22862] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22862] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22863] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22863] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22840] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22840] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22890] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22890] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22891] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22891] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22868] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22868] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22918] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22918] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22919] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22919] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22896] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22896] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22946] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22946] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22947] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22947] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22924] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22924] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:22974] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22974] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22975] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22975] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22952] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22952] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:23002] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23002] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23003] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23003] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:22980] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:22980] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:23030] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23030] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23031] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23031] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23008] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:23008] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:23058] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23058] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23059] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23059] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23036] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:23036] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:23086] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23086] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23087] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23087] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23064] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:23064] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:23114] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23114] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23115] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23115] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23092] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:23092] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[compute-13-5.local:23142] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23142] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23143] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_fca: libibmad.so.5: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23143] mca: base: component_find: unable to open /data/apps/mpi/openmpi-1.8.3/gcc/4.9.2/lib/openmpi/mca_coll_hcoll: libhcoll.so.1: cannot open shared object file: No such file or directory (ignored)
+[compute-13-5.local:23120] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[compute-13-5.local:23120] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

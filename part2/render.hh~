@@ -13,12 +13,12 @@ namespace gil = boost::gil;
 struct Color_Point {
   int r, g, b;
 };
-/*
+
 struct packet{
 	float
 	 row;				//row index
 	bool noTask;		//assigned a first task or not?
-}; */
+};
 
 /** Construct a color suitable for display. */
 gil::rgb8_pixel_t render(float v);

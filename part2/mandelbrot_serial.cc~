@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include "timer.c"
 
 #include "render.hh"
 
@@ -57,17 +58,27 @@ main(int argc, char* argv[]) {
   gil::rgb8_image_t img(height, width);
   auto img_view = gil::view(img);
 
+ 	stopwatch_init ();
+  struct stopwatch_t* timer = stopwatch_create (); assert (timer);
+	stopwatch_start (timer);
+
   y = minY;
   for (int i = 0; i < height; ++i) {
     x = minX;
     for (int j = 0; j < width; ++j) {
       img_view(j, i) = render(mandelbrot(x, y)/512.0);
-			printf("%f",(mandelbrot(x, y)/512.0));
+			//printf("%f\n",(mandelbrot(x, y)/512.0));
       x += jt;
     }
     y += it;
   }
   gil::png_write_view("mandelbrot.png", const_view(img));
+
+	stopwatch_start (timer);
+	long double tFinal = stopwatch_stop (timer);
+
+	printf("Serial Time : %Lg\n", tFinal);
+	stopwatch_destroy (timer);
 }
 
 /* eof */

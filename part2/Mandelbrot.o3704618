@@ -1,0 +1,190 @@
+*** Trial 1 ***
+Serial Time : 0
+*** Trial 2 ***
+Serial Time : 0
+*** Trial 3 ***
+Serial Time : 0
+*** Trial 4 ***
+Serial Time : 0
+*** Trial 5 ***
+Serial Time : 0
+*** Trial 1 ***
+--------------------------------------------------------------------------
+[[41133,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Susie Time = 0.447179
+*** Trial 2 ***
+--------------------------------------------------------------------------
+[[41089,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Susie Time = 0.449529
+*** Trial 3 ***
+--------------------------------------------------------------------------
+[[41317,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Susie Time = 0.508935
+*** Trial 4 ***
+--------------------------------------------------------------------------
+[[41337,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Susie Time = 0.452020
+*** Trial 5 ***
+--------------------------------------------------------------------------
+[[41309,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Susie Time = 0.436266
+*** Trial 1 ***
+--------------------------------------------------------------------------
+[[41265,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Joe Time = 0.430327
+*** Trial 2 ***
+--------------------------------------------------------------------------
+[[41237,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Joe Time = 0.440572
+*** Trial 3 ***
+--------------------------------------------------------------------------
+[[41449,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Joe Time = 0.460350
+*** Trial 4 ***
+--------------------------------------------------------------------------
+[[41421,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Joe Time = 0.468804
+*** Trial 5 ***
+--------------------------------------------------------------------------
+[[41377,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Joe Time = 0.448527
+*** Trial 1 ***
+--------------------------------------------------------------------------
+[[41349,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+MS Time = 0.738521
+*** Trial 2 ***
+--------------------------------------------------------------------------
+[[41369,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+MS Time = 0.724373
+*** Trial 3 ***
+--------------------------------------------------------------------------
+[[41597,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+MS Time = 0.736365
+*** Trial 4 ***
+--------------------------------------------------------------------------
+[[41553,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+MS Time = 0.707583
+*** Trial 5 ***
+--------------------------------------------------------------------------
+[[41525,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: compute-13-5
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+MS Time = 0.705238
