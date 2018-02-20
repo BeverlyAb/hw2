@@ -75,7 +75,7 @@ main(int argc, char* argv[]) {
   gil::png_write_view("mandelbrot.png", const_view(img));
 
 	long double tFinal = stopwatch_stop (timer);
-	printf("Serial Time : %Lg\n", tFinal);
+	printf("%Lg\n", tFinal);
 	stopwatch_destroy (timer);
 }
 

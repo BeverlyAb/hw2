@@ -7,7 +7,6 @@
 #include <cstdlib>
 #include <mpi.h>
 #include "render.hh"
-#include "timer.c"
 
 using namespace std;
 
@@ -78,10 +77,9 @@ main(int argc, char* argv[])
 	int picIndx = 0;
 	int nextIndx = 0;
 	float * localMandelbrot = (float *)malloc(sizeof(float) * width);
-
-	stopwatch_init ();
-  struct stopwatch_t* timer = stopwatch_create (); assert (timer);
-	stopwatch_start (timer);
+	bool trueLast = true;
+	
+	double startTime = MPI_Wtime();
 
 	if(world_rank == MASTER){
 		//assign init tasks
@@ -92,41 +90,45 @@ main(int argc, char* argv[])
 
 		//recv both notifies proc is ready for more and returns computed work
 		for(picIndx = 0; picIndx < height; picIndx++){
-			MPI_Recv(&localIndx, 1, MPI_FLOAT, MPI_ANY_SOURCE, MPI_ANY_TAG, 
+			MPI_Recv(localMandelbrot, width, MPI_FLOAT, MPI_ANY_SOURCE, MPI_ANY_TAG, 
 							MPI_COMM_WORLD, &status);
+			
+			int localIndx = status.MPI_TAG;			
 			int procRank = status.MPI_SOURCE;
 
-			if((picIndx + world_size - 1) < height)
+			//update final		
+			for (int j = 0; j < width; ++j) 
+   			img_view(j, localIndx) = render(localMandelbrot[j]);
+
+			if((picIndx + world_size -1) < height)
 				nextIndx = picIndx +  world_size -1;
-			else {
+			else 
 				nextIndx = -1;
-			//	printf("last indx = %i\n", picIndx + world_size -1);
-			}
+			
 			//send task based on procRank 
 			MPI_Send(&nextIndx, 1, MPI_INT, procRank, MASTER, MPI_COMM_WORLD);
 		}
 	} else { //slaves
 		while(1){
-			MPI_Recv(&picIndx, 1, MPI_INT, MASTER, MASTER,	MPI_COMM_WORLD, &status);  
-			if(picIndx < 0) break; // done with all rows, time to terminate
+			MPI_Recv(&picIndx, 1, MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG,	MPI_COMM_WORLD, &status);  
+			if(picIndx < 0) { // done with all rows, time to terminate
+			//	printf("%i is done\n", world_rank);					
+				break;
+			}
 			compute_single_row(picIndx, width, localMandelbrot, minX, minY,it, jt);	
-			//update final				
-			for (int j = 0; j < width; ++j) {
-      		img_view(j, picIndx) = render(localMandelbrot[j]);
-    	}
-			MPI_Send(&localIndx, 1, MPI_FLOAT, MASTER, picIndx, MPI_COMM_WORLD);
+			MPI_Send(localMandelbrot, width, MPI_FLOAT, MASTER, picIndx, MPI_COMM_WORLD);
 		}
 	}
 
   gil::png_write_view("mandelbrot.png", const_view(img));
 
-	long double tFinal = stopwatch_stop (timer);
 	MPI_Barrier(MPI_COMM_WORLD);
+	double total = MPI_Wtime() - startTime;
 	if(world_rank == 0){
-		printf("MS Time = %Lg\n", tFinal);
+		printf("%0.3lf\n", total);
 	}
 	free(localMandelbrot);
-	stopwatch_destroy (timer);
+	MPI_Barrier(MPI_COMM_WORLD);
 	MPI_Finalize();
 }
 

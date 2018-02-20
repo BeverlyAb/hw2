@@ -75,9 +75,7 @@ main (int argc, char* argv[])
 	y = minY;
 	int nextWidth = 0;
 	
-	stopwatch_init ();
-  struct stopwatch_t* timer = stopwatch_create (); assert (timer);
-	stopwatch_start (timer);
+	double startTime = MPI_Wtime();
 	
 	for(int i = world_rank; i < height; i += world_size){
 		x = minX;
@@ -88,7 +86,7 @@ main (int argc, char* argv[])
 			//			i, world_rank, localMandelbrot[j]);
 			x += jt;
 		}	
-		MPI_Barrier(MPI_COMM_WORLD);	
+	//	MPI_Barrier(MPI_COMM_WORLD);	
 		MPI_Gather(localMandelbrot, width, MPI_FLOAT, 
 						finalMandelbrot + nextWidth, width,
 				 		MPI_FLOAT, ROOT, MPI_COMM_WORLD);		
@@ -111,7 +109,7 @@ main (int argc, char* argv[])
 		  x = minX;
 		  for (int j = 0; j < width; ++j) {
 		    img_view(j, i) = render(mandelbrot(x, y)/512.0);
-				//printf("%f\n",(mandelbrot(x, y)/512.0));
+			//	printf("%f\n",(mandelbrot(x, y)/512.0));
 		    x += jt;
 		  }
 			leftover++;
@@ -119,15 +117,13 @@ main (int argc, char* argv[])
 	}
   gil::png_write_view("mandelbrot.png", const_view(img));
 
-	long double tFinal = stopwatch_stop (timer);
-
 	MPI_Barrier(MPI_COMM_WORLD);
+	double total = MPI_Wtime() - startTime;
 	if(world_rank == 0){
-		printf("Susie Time = %Lg\n", tFinal);
+		printf("%0.3lf\n", total);
 		free(finalMandelbrot);
 	}
 	free(localMandelbrot);
-	stopwatch_destroy (timer);
 	MPI_Finalize();
 }
 

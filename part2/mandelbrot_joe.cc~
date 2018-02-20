@@ -11,7 +11,6 @@
 #include <vector>
 #include <mpi.h>
 #include <assert.h>
-#include "timer.h"
 
 using namespace std;
 
@@ -36,17 +35,17 @@ mandelbrot(double x, double y) {
 }
 void compute_row(int p,int width,Color_Point *img,int N,double minX,double minY,double it,double jt)
 {
-	#ifdef DEBUG
+	#ifdef DEBUG	
 	printf("Computing for rank=%d\n",p);
 	#endif
 	double y=minY + p*N*it;
 	int curr_index = 0;
-  	for (int i = p*N; i < N*(p+1); ++i)
-  	{
+  	for (int i = p*N; i < N*(p+1); ++i) 
+  	{	
     		double x = minX;
-    		for (int j = 0; j < width; ++j)
+    		for (int j = 0; j < width; ++j) 
 		{
-
+      			
 			curr_index= (i-p*N)*width + j;
       			Color_Point t = render_color(mandelbrot(x,y)/512.0);
 			img[curr_index].r = t.r;
@@ -54,14 +53,14 @@ void compute_row(int p,int width,Color_Point *img,int N,double minX,double minY,
 			img[curr_index].b = t.b;
 
 			#ifdef DEBUG_EXTENDED
-
+			
 			int curr_index= (i-p*N)*width + j;
-			printf("CI:%d r:%d ir:%d",curr_index,t.r,img[curr_index].r);
+			printf("CI:%d r:%d ir:%d",curr_index,t.r,img[curr_index].r);		
 			#endif
 			x += jt;
     		}
     		y += it;
-
+		
 		#ifdef DEBUG
 		printf("\n");
 		#endif
@@ -73,11 +72,11 @@ void compute_row(int p,int width,Color_Point *img,int N,double minX,double minY,
 		for(int j= 0;j<width;j++)
 		{
 			curr_index= i*width + j;
-			printf("CI:%d r:%d ",curr_index,img[curr_index].r);
+			printf("CI:%d r:%d ",curr_index,img[curr_index].r);		
 		}
 		printf("\n");
 	}
-	#endif
+	#endif 
 
 
 }
@@ -87,7 +86,7 @@ main(int argc, char* argv[]) {
   double maxX = 0.7;
   double minY = -1.25;
   double maxY = 1.25;
-
+  
   int height, width;
   if (argc == 3) {
     height = atoi (argv[1]);
@@ -108,8 +107,8 @@ main(int argc, char* argv[]) {
   	auto img_view = gil::view(img);
 
   y = minY;
-
-
+ 
+ 
  MPI_Init(NULL, NULL);
 
   MPI_Datatype dt_point;
@@ -132,28 +131,26 @@ main(int argc, char* argv[]) {
    Color_Point *all_rows = NULL;
    if (world_rank == 0) {
      all_rows = (Color_Point *)malloc(sizeof(Color_Point) * num_elements_per_proc*world_size);
-
-	#ifdef DEBUG
-	printf("World size: %d\n",world_size);
-	#endif
+	
+	#ifdef DEBUG	
+	printf("World size: %d\n",world_size);   
+	#endif 
 }
 
 
 
    Color_Point *row_blocks = (Color_Point *)malloc(sizeof(Color_Point) * num_elements_per_proc);
    assert(row_blocks!=NULL);
-
-	 stopwatch_init ();
-   struct stopwatch_t* timer = stopwatch_create (); assert (timer);
-	 stopwatch_start (timer);
-
    //Computing for all blocks of rows
-   compute_row(world_rank,width,row_blocks,N,minX,minY,it,jt);
+   double t_start, t_elapsed;  
+   MPI_Barrier (MPI_COMM_WORLD); 
+   t_start = MPI_Wtime();
+  compute_row(world_rank,width,row_blocks,N,minX,minY,it,jt);
 
 
 
 
-	#ifdef DEBUG
+	#ifdef DEBUG	
   printf("\n-------Compute Results-----------\n");
   printf("my_rank: %d\n",world_rank);
 	printf("Gathering values\n");
@@ -162,17 +159,17 @@ main(int argc, char* argv[]) {
 	{
 		for(int j= 0;j<width;j++)
 		{
-
+			
 			int curr_index= i*width + j;
-			printf(" oCI:%d r:%d   ",curr_index,row_blocks[curr_index].r);
+			printf(" oCI:%d r:%d   ",curr_index,row_blocks[curr_index].r);		
 		}
 		printf("\n");
 	}
 	#endif
-
+	
 
    MPI_Gather(row_blocks, num_elements_per_proc,dt_point , all_rows, num_elements_per_proc, dt_point, 0, MPI_COMM_WORLD);
-
+   
 if (world_rank == 0) {
   	gil::rgb8_image_t img(height, width);
   	auto img_view = gil::view(img);
@@ -186,25 +183,24 @@ if (world_rank == 0) {
          int b =  all_rows[i*width+j].b;
 	int curr_index = i*width + j;
 	#ifdef DEBUG
-	printf(" rCI:%d r:%d   ",curr_index,r);
+	printf(" rCI:%d r:%d   ",curr_index,r);		
        #endif
 	  img_view(j, i) = gil::rgb8_pixel_t(r,g,b);//This was removed for checking rest of code
-
+      
 	}
      }
      gil::png_write_view("mandelbrot.png", const_view(img));
    }
-	
-	long double tFinal = stopwatch_stop (timer);
-	
 
+  
+  MPI_Barrier (MPI_COMM_WORLD); 
+  t_elapsed = MPI_Wtime () - t_start; /* Stop timer */
    // Clean up
    if (world_rank == 0) {
-		printf("Joe Time = %Lg\n", tFinal);
+    printf("%0.3lf\n",t_elapsed); 
     free(all_rows);
    }
    free(row_blocks);
-	 stopwatch_destroy (timer);
 
    MPI_Barrier(MPI_COMM_WORLD);
    MPI_Finalize();

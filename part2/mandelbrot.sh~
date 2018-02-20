@@ -11,73 +11,67 @@
 #    may prevent this multicore MPI job from running.   This is called
 #    job starvation.
 
+#Added for Block Commenting
+[ -z $BASH ] || shopt -s expand_aliases
+alias BEGINCOMMENT="if [ ]; then"
+alias ENDCOMMENT="fi"
+
+
 # Module load boost
 module load boost/1.57.0
 
 # Module load OpenMPI
 module load openmpi-1.8.3/gcc-4.9.2
 
-####### Run the program 48 Cores ############
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial Serial ${trial} ***"
-#  mpirun -np 1  ./mandelbrot_serial 1000 1000
-#done
-
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial (48 Cores) ${trial} ***"
-#  mpirun -np 6 ./mandelbrot_ms 1000 1000
-#done
-
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial Susie (48 Cores) ${trial} ***"
-#  mpirun -np 6 ./mandelbrot_susie 1000 1000
-#done
-
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial Joe (48 Cores) ${trial} ***"
-#  mpirun -np 6 ./mandelbrot_joe 1000 1000
-#done
-
-####### Run the program 56 Cores ############
+echo "*** Trial Serial  ***"
+####### Serial ############
 for trial in 1 2 3 4 5 ; do
-  echo "*** Trial Serial ${trial} ***"
-  mpirun -np 1  ./mandelbrot_serial 1000 1000
+  ./mandelbrot_serial 1000 1000
 done
 
+
+echo "*** MS  ***"
+######### MS ############
+echo "*** MS 2  ***"
 for trial in 1 2 3 4 5 ; do
-  echo "*** Trial (56 Cores) ${trial} ***"
   mpirun -np 2 ./mandelbrot_ms 1000 1000
 done
-
+echo "*** MS 8  ***"
 for trial in 1 2 3 4 5 ; do
-  echo "*** Trial Susie (56 Cores) ${trial} ***"
-  mpirun -np 2 ./mandelbrot_susie 1000 1000
+  mpirun -np 8 ./mandelbrot_ms 1000 1000
+done
+echo "*** MS 32  ***"
+for trial in 1 2 3 4 5 ; do
+  mpirun -np 32 ./mandelbrot_ms 1000 1000
 done
 
+echo "*** Joe  ***"
+######### Joe ############
+echo "*** Joe 2 ***"
 for trial in 1 2 3 4 5 ; do
-  echo "*** Trial Joe (56 Cores) ${trial} ***"
   mpirun -np 2 ./mandelbrot_joe 1000 1000
 done
+echo "*** Joe 8 ***"
+for trial in 1 2 3 4 5 ; do
+  mpirun -np 8 ./mandelbrot_joe 1000 1000
+done
+echo "*** Joe 32 ***"
+for trial in 1 2 3 4 5 ; do
+  mpirun -np 32 ./mandelbrot_joe 1000 1000
+done
 
-####### Run the program 64 Cores ############
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial Serial ${trial} ***"
-#  mpirun -np 1  ./mandelbrot_serial 1000 1000
-#done
-
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial (64 Cores) ${trial} ***"
-#  mpirun -np 8 ./mandelbrot_ms 1000 1000
-#done
-
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial Susie (64 Cores) ${trial} ***"
-#  mpirun -np 8 ./mandelbrot_susie 1000 1000
-#done
-
-#for trial in 1 2 3 4 5 ; do
-#  echo "*** Trial Joe (64 Cores) ${trial} ***"
-#  mpirun -np 8 ./mandelbrot_joe 1000 1000
-#done
-
+echo "*** Susie  ***"
+######### Susie ############
+echo "*** Susie  2 ***"
+for trial in 1 2 3 4 5 ; do
+  mpirun -np 2 ./mandelbrot_susie 1000 1000
+done
+echo "*** Susie 8 ***"
+for trial in 1 2 3 4 5 ; do
+  mpirun -np 8 ./mandelbrot_susie 1000 1000
+done
+echo "*** Susie  32 ***"
+for trial in 1 2 3 4 5 ; do
+  mpirun -np 32 ./mandelbrot_susie 1000 1000
+done
 
